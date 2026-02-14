@@ -1,6 +1,6 @@
 🌐 **WEBSITE:** https://lynx-development.lynx197.qzz.io/
 
-# 🪙 Dynamic EcoVault v2.0
+# 🪙 Dynamic EcoVault v1.2
 
 ### For Minecraft 1.21.x
 
