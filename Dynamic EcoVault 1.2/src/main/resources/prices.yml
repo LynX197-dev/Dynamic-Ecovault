@@ -1,0 +1,4 @@
+# Dynamic price multipliers for materials
+# This file stores the current price multipliers for dynamic pricing
+# Do not edit manually unless you know what you're doing
+# Format: MATERIAL_NAME: MULTIPLIER

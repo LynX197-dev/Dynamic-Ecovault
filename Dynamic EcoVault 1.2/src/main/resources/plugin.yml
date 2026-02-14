@@ -1,0 +1,83 @@
+name: DynamicEcoVault
+version: ${project.version}
+main: com.itz_lynx197.dynamicecovault.DynamicEcoVault
+api-version: '1.21'
+description: Advanced economy plugin with dynamic pricing and taxation
+website: https://github.com/itz_lynx197
+depend: [Vault]
+softdepend: [PlaceholderAPI, DiscordSRV, LuckPerms, Essentials, EconomyShopGUI, EconomyShopGUI-Premium]
+
+commands:
+  bank:
+    description: Bank management commands
+    usage: /bank <balance|deposit|withdraw|loan|repay|settax|vaultbalance|taxinfo>
+    aliases: [b, bankvault]
+    permission: dynamicecovault.bank.use
+  dev:
+    description: Developer commands
+    usage: /dev reload
+    permission: dynamicecovault.bank.reload
+
+
+permissions:
+  dynamicecovault.*:
+    description: Grants all permissions
+    children:
+      dynamicecovault.bank.*: true
+  dynamicecovault.bank.*:
+    description: All bank permissions
+    children:
+      dynamicecovault.bank.users.*: true
+      dynamicecovault.bank.admin: true
+  dynamicecovault.bank.users.*:
+    description: User bank permissions
+    children:
+      dynamicecovault.bank.use: true
+      dynamicecovault.bank.balance: true
+      dynamicecovault.bank.deposit: true
+      dynamicecovault.bank.withdraw: true
+      dynamicecovault.bank.loan: true
+      dynamicecovault.bank.repay: true
+      dynamicecovault.bank.taxinfo: true
+  dynamicecovault.bank.use:
+    description: Basic bank access
+    default: true
+  dynamicecovault.bank.balance:
+    description: Check bank balance
+    default: true
+  dynamicecovault.bank.deposit:
+    description: Deposit money
+    default: true
+  dynamicecovault.bank.withdraw:
+    description: Withdraw money
+    default: true
+  dynamicecovault.bank.loan:
+    description: Request loans
+    default: true
+  dynamicecovault.bank.repay:
+    description: Repay loans
+    default: true
+  dynamicecovault.bank.admin:
+    description: Admin bank commands
+    default: op
+    children:
+      dynamicecovault.bank.settax: true
+      dynamicecovault.bank.vaultbalance: true
+      dynamicecovault.bank.es.reset: true
+      dynamicecovault.bank.reload: true
+  dynamicecovault.bank.es.reset:
+    description: Permission to reset ES prices
+    default: op
+  dynamicecovault.bank.settax:
+    description: Set tax rates
+    default: op
+  dynamicecovault.bank.vaultbalance:
+    description: View bank vault balance
+    default: op
+  dynamicecovault.bank.taxinfo:
+    description: View tax information
+    default: true
+  dynamicecovault.bank.reload:
+    description: Reload the plugin configuration
+    default: op
+

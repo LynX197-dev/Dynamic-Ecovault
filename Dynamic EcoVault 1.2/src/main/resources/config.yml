@@ -1,0 +1,75 @@
+# ======================================
+# Dynamic EcoVault Configuration
+# By 𝕃ʏи𝕏
+# ======================================
+
+# Bank vault account name (used in Vault economy)
+bank-vault-name: "BankVault"
+
+# Tax rates (0.0 = 0%, 1.0 = 100%)
+taxation:
+
+  # Tax applied when buying items from shops
+  buy: 0.10  # 10%
+  # Tax applied when selling items to shops
+  sell: 0.05  # 5%
+  # Tax applied when giving money to other players
+  give: 0.05  # 5%
+  # Tax applied when receiving money from other players
+  receive: 0.05  # 5%
+
+# Loan system settings
+loans:
+  # Repayment time in in-game days (1 day = 20 minutes)
+  repayment-days: 7
+  # Interest rate on loans (0.1 = 10%)
+  interest-rate: 0.15  # 15%
+  # Minimum loan amount
+  minimum-amount: 100.0
+  # Maximum loan amount
+  maximum-amount: 50000.0
+
+# Dynamic economy settings
+economy:
+  # Enable dynamic pricing based on supply/demand
+  enabled: true
+  # How much prices fluctuate (0.0 = no change, 1.0 = 100% change possible)
+  fluctuation-rate: 0.20  # 20%
+  # Price update interval in ticks (20 ticks = 1 second)
+  update-interval: 6000  # 5 minutes
+  # Minimum price multiplier (prevents items from becoming too cheap)
+  min-price-multiplier: 0.25  # 25% of base price
+  # Maximum price multiplier (prevents items from becoming too expensive)
+  max-price-multiplier: 3.0  # 300% of base price
+
+# Discord integration (requires DiscordSRV)
+discord:
+  # Enable Discord notifications
+  enabled: true
+  # Channel ID for economy notifications (leave empty to use default)
+  channel-id: ""
+  # Send notifications for tax collections
+  notify-tax: true
+  # Send notifications for loans
+  notify-loans: true
+  # Send notifications for large transactions (above threshold)
+  notify-large-transactions: true
+  # Transaction threshold for Discord notifications
+  large-transaction-threshold: 10000.0
+
+# Integrations
+integrations:
+  economy-shop-gui:
+    enabled: true
+
+# Database settings (for loan tracking)
+database:
+  # Storage type: sqlite, mysql
+  type: "sqlite"
+  # MySQL settings (only if type is mysql)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "dynamicecovault"
+    username: "root"
+    password: "password"

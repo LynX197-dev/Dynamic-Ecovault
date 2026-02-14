@@ -1,0 +1,74 @@
+# ======================================
+# Dynamic EcoVault Messages
+# By 𝕃ʏи𝕏
+# ======================================
+
+prefix: "&8[&6DynamicEcoVault&8]&r"
+
+# General messages
+no-permission: "{prefix} &cYou don't have permission to use this command!"
+player-only: "{prefix} &cThis command can only be used by players!"
+invalid-amount: "{prefix} &cInvalid amount! Please enter a valid number."
+insufficient-items: "{prefix} &cInsufficient items! You need &6{amount}x {item}&c."
+inventory-full: "{prefix} &cYour inventory is full!"
+transaction-failed: "{prefix} &cTransaction failed! Please try again."
+insufficient-funds: "{prefix} &cInsufficient funds! You need &6${amount}&c."
+invalid-player: "{prefix} &cPlayer not found!"
+
+# Bank messages
+bank:
+  balance: "{prefix} &aYour balance: &6${balance}"
+  deposit-success: "{prefix} &aSuccessfully deposited &6${amount}&a into your account!"
+  withdraw-success: "{prefix} &aSuccessfully withdrew &6${amount}&a from your account!"
+  vault-balance: "{prefix} &aBank Vault Balance: &6${balance}"
+  prices-reset: "{prefix} &aPrices reset to base values!"
+  
+# Loan messages
+loan:
+  request-success: "{prefix} &aLoan of &6${amount}&a approved! Repay &6${total}&a by {date}."
+  already-active: "{prefix} &cYou already have an active loan!"
+  amount-too-low: "{prefix} &cLoan amount must be at least &6${min}&c!"
+  amount-too-high: "{prefix} &cLoan amount cannot exceed &6${max}&c!"
+  no-active-loan: "{prefix} &cYou don't have an active loan!"
+  repay-success: "{prefix} &aSuccessfully repaid &6${amount}&a! Remaining: &6${remaining}"
+  repay-full: "{prefix} &aLoan fully repaid! Total paid: &6${amount}"
+  overdue: "{prefix} &cYour loan of &6${amount}&c is overdue! Automatic deduction applied."
+  auto-repaid: "{prefix} &aYour loan of &6${amount}&a has been automatically repaid!"
+
+# Tax messages
+tax:
+  collected-buy: "{prefix} &eTax collected: &6${amount}&e (Buy)"
+  collected-sell: "{prefix} &eTax collected: &6${amount}&e (Sell)"
+  collected-give: "{prefix} &eTax collected: &6${amount}&e (Give)"
+  collected-receive: "{prefix} &eTax collected: &6${amount}&e (Receive)"
+  rate-updated: "{prefix} &aUpdated {type} tax rate to &6{rate}%"
+  info: "{prefix} &aTax Rates:\n&bBuy: &f{buy_rate}%\n&bSell: &f{sell_rate}%\n&bGive: &f{give_rate}%\n&bReceive: &f{receive_rate}%\\n&bLoan Interest: &f{loan_interest_rate}%"
+  
+  
+# Economy messages
+economy:
+  price-increased: "{prefix} &e{item} price increased to &6${price}&e (+{percent}%)"
+  price-decreased: "{prefix} &e{item} price decreased to &6${price}&e (-{percent}%)"
+
+# Discord messages
+discord:
+  tax-collected: "💰 **Tax Collected**: ${amount} ({type})"
+  loan-issued: "🏦 **Loan Issued**: ${amount} to {player}"
+  loan-repaid: "✅ **Loan Repaid**: ${amount} by {player}"
+  large-transaction: "💸 **Large Transaction**: {player} {type} ${amount}"
+  bank-vault-update: "🏛️ **Bank Vault Updated**: New balance ${balance}"
+
+# Command usage
+usage:
+  bank: "{prefix} &cUsage: /bank <balance|deposit|withdraw|loan|repay|settax|vaultbalance|es|taxinfo>"
+  bank-deposit: "{prefix} &cUsage: /bank deposit <amount>"
+  bank-withdraw: "{prefix} &cUsage: /bank withdraw <amount>"
+  bank-loan: "{prefix} &cUsage: /bank loan <amount>"
+  bank-repay: "{prefix} &cUsage: /bank repay <amount>"
+  bank-settax: "{prefix} &cUsage: /bank settax <buy|sell|give|receive> <rate>"
+  bank-es: "{prefix} &cUsage: /bank es <reset>"
+
+# Dev messages
+dev:
+  reload-success: "{prefix} &aPlugin configuration and prices reloaded!"
+  usage: "{prefix} &cUsage: /dev reload"
