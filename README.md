@@ -1,41 +1,27 @@
+🌐 **WEBSITE:** https://lynx-development.lynx197.qzz.io/
+
 # 🪙 Dynamic EcoVault v2.0
 
 ### For Minecraft 1.21.x
 
 ## 💼 Server Economy Overview
 
-Dynamic EcoVault transforms your Minecraft world into a living, breathing economy where supply, demand, banking, taxation, and dynamic trading shape how players earn, spend, and grow.
+Dynamic EcoVault transforms your Minecraft world into a living, breathing economy where banking, taxation, and financial systems shape how players earn, spend, and grow.
 
-It’s not just another economy plugin — it’s a complete economic simulation with an in-built dynamic shop, flexible Vault integration, and optimized performance.
+It’s not just another economy plugin — it’s a complete financial framework with flexible Vault integration and optimized performance.
 
 ⚙️ Core Systems
 💹 Dynamic Economy
 
-Prices automatically rise and fall based on player activity, supply, and demand.
+Create a realistic financial environment where strategic decisions matter.
 
-Create a realistic marketplace where scarcity and trading truly matter.
+Encourage players to manage money wisely through banking, loans, and taxation.
 
-Encourage players to think strategically — buy low, sell high, and adapt to changing prices.
-
-Works with EcoVault’s in-built Dynamic Shop GUI — no external shop plugin required!
-
-## 🏪 Dynamic Shop System (NEW)
-
-Fully in-built, lightweight, and configurable shop system.
-
-No dependency on EconomyShopGUI or EssentialsX.
-
-Async-powered for lag-free performance.
-
-Define base, min, and max prices per item in simple YAML files.
-
-Prices automatically adjust based on player sales and purchases.
-
-/shop command opens the interactive Dynamic Shop GUI.
+Designed to work seamlessly with your existing economy setup while adding depth and realism.
 
 ## 💰 Taxation System
 
-Automatically applies taxes on income, trades, payments, and shop transactions.
+Automatically applies taxes on income, trades, and payments.
 
 Taxes are funneled directly into the server bank vault.
 
@@ -47,7 +33,7 @@ Designed to simulate real economic regulation in-game.
 
 Integrated directly with Vault — no EssentialsX or fake accounts needed.
 
-The Bank Vault (default name: bankvault, configurable) acts as the global treasury.
+The Bank Vault (default name: BankVault, configurable) acts as the global treasury.
 
 Supports loans, interest rates, and repayment periods (default: 7 in-game days).
 
@@ -69,46 +55,33 @@ Dynamic EcoVault works seamlessly with:
 
 💬 DiscordSRV – Sends tax and loan updates directly to your Discord server.
 
-**(EssentialsX and external shop plugins are no longer required!)**
-
 ## 💬 Commands
 ### 👤 Player Commands
 
-/bank balance — Check your bank balance
-/bank deposit <amount> — Deposit money into the bank
-/bank withdraw <amount> — Withdraw funds from the bank
-/bank loan <amount> — Request a loan
-/bank repay — Repay your current loan
-/tax info — View current tax rates
-/shop — Open the in-built Dynamic Shop GUI
+/bank balance — Check your bank balance  
+/bank deposit <amount> — Deposit money into the global treasury
+/bank withdraw <amount> — Withdraw funds from the global treasury  
+/bank loan <amount> — Request a loan  
+/bank repay <amount> — Repay your current loan  
+/bank taxinfo — View current tax rates  
 
 ### 🛠️ Admin Commands
 
-/eco set <player> <amount> — Set a player’s balance
-/eco give <player> <amount> — Give money to a player
-/eco take <player> <amount> — Remove money from a player
-/eco reload — Reload configuration files
-/eco setprice <item> <price> — Manually set item price
-/eco resetmarket — Reset all market data
-/tax set <rate> — Adjust tax rate
-/tax toggle — Enable or disable taxation
-/bankvault balance — Check total server bank balance
-/bankvault deposit <amount> — Deposit funds into server vault
-/bankvault withdraw <amount> — Withdraw funds from server vault
-/loan setrate <percent> — Change loan interest rate
-/loan forcerepay <player> — Force a player’s loan repayment
+ /dev reload - Reload Plugin
+ /bank settax <give|recieve> - Set tax rates
+ /bank vaultbalance - To check balance of global treasury
 
 ## 🧩 Update Highlights
 
-✅ Added in-built Dynamic Shop System (no external plugins needed)
-✅ Removed EssentialsX dependency — integrates with any Vault-based economy
-✅ Optimized Vault integration for Dynamic CORE+
-✅ Fixed multiple bugs and glitches for smoother transactions
-✅ Improved asynchronous performance and data handling
+✅ Removed in-built shop system for a more modular economy approach  
+✅ No EssentialsX dependency — integrates with any Vault-based economy  
+✅ Optimized Vault integration for Dynamic CORE+  
+✅ Fixed multiple bugs and glitches for smoother transactions  
+✅ Improved asynchronous performance and data handling  
 
 ---
 
 ### 🌍 **Why Choose Dynamic EcoVault**
 
-Because Minecraft deserves an **economy that evolves**.
-From shifting prices to loans and taxes, every financial move influences the world — creating **emergent gameplay, competition, and strategic depth** that no static economy can match.
+Because Minecraft deserves an **economy that evolves**.  
+From banking systems to loans and taxation, every financial move influences the world — creating **emergent gameplay, cooperation, and strategic depth** that no static economy can match.
